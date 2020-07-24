@@ -63,8 +63,7 @@
 
 	function startWebSocketConnection () {
 		ws.update(value => {
-			// const socket = new WebSocket(wsUrl);
-			const socket = new WebSocket('ws://127.0.0.1:8080/ws');
+			const socket = new WebSocket(wsUrl);
 
 			socket.onmessage = (event) => {
 				processMessage(event.data);
